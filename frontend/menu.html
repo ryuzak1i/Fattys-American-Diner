@@ -3,9 +3,353 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu | Fatty's American Diner</title>
 </head>
 <body>
-    
+<header>
+    <nav class="navbar">
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <ul class="navbar-tabs">
+            <!-- Center Group -->
+            <li class="nav-center">
+                <a id="brand-name" href="index.html">
+                    <img id="brand-logo" src="" alt="Fatty's American Diner Logo">
+                </a>
+            </li>
+
+            <!-- Left Group -->
+            <li class="nav-left">
+                <a href="index.html">HOME</a>
+                <a href="menu.html" class="active">MENU</a>
+                <a href="about.html">ABOUT</a>
+            </li>
+
+            <!-- Right Group -->
+            <li class="nav-right">
+                <a href="ordernow.html">ORDER NOW</a>
+                <a href="#" class="cart-icon-link" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <!--Notif bubble-->
+                    <span class="cart-badge">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main id="menu-page">
+    <!-- HERO SLIDER SECTION -->
+    <section class="menu-hero section-container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <video id="slide-1" autoplay loop muted playsinline aria-label="Burger Promotion">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <video id="slide-2" autoplay loop muted playsinline aria-label="Burger Promotion">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <video id="slide-3" autoplay loop muted playsinline aria-label="Burger Promotion">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="hero-overlay">
+                <div class="button-container">
+                    <a href="#menu-section" class="shop-button">MUST TRY</a>
+                </div>
+            </div>
+
+            <div class="slider-nav">
+                <a href="#slide-1" aria-label="Slide 1"></a>
+                <a href="#slide-2" aria-label="Slide 2"></a>
+                <a href="#slide-3" aria-label="Slide 3"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVY MENU HEADER -->
+    <section class="menu-banner">
+        <h1 class="menu-page-title">MENU</h1>
+    </section>
+
+    <!-- MENU FILTER BAR + PRODUCT GRID -->
+    <section class="menu-content-wrapper" id="menu-section">
+        <!-- Floating Left Category Filter Bar -->
+        <aside class="category-filter-bar" aria-label="Filter menu by category">
+            <button type="button" class="filter-btn active" data-category="burger" aria-label="Burgers">
+                <i class="fa-solid fa-burger"></i>
+            </button>
+            <button type="button" class="filter-btn" data-category="hotdog" aria-label="Hotdogs">
+                <i class="fa-solid fa-hotdog"></i>
+            </button>
+            <button type="button" class="filter-btn" data-category="sides" aria-label="Sides">
+                <i class="fa-solid fa-bowl-food"></i>
+            </button>
+            <button type="button" class="filter-btn" data-category="milkshake" aria-label="Milkshakes">
+                <i class="fa-solid fa-cup-straw"></i>
+            </button>
+        </aside>
+
+        <!-- Right Menu Area -->
+        <div class="menu-display-area">
+            <h2 class="menu-section-heading" id="category-heading">WHAT'S NEW</h2>
+
+            <div class="menu-cards-grid" id="menu-grid">
+                
+                <!-- ================= BURGERS ================= -->
+                <article class="menu-item-card" data-category="burger">
+                    <div class="card-image-box">
+                        <img src="" alt="Fatty's Original">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-info">
+                            <h3 class="dish-title">Fatty's Original</h3>
+                            <span class="dish-price">₱ 000.00</span>
+                            <p class="dish-desc">Placeholder description for Fatty's Original.</p>
+                        </div>
+                        <button type="button" class="btn-add-cart" aria-label="Add Fatty's Original to cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="menu-item-card" data-category="burger">
+                    <div class="card-image-box">
+                        <span class="item-badge best-seller">BEST SELLER</span>
+                        <img src="" alt="Fatty's Bacon Original">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-info">
+                            <h3 class="dish-title">Fatty's Bacon Original</h3>
+                            <span class="dish-price">₱ 000.00</span>
+                            <p class="dish-desc">Placeholder description for Fatty's Bacon Original.</p>
+                        </div>
+                        <button type="button" class="btn-add-cart" aria-label="Add Fatty's Bacon Original to cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="menu-item-card" data-category="burger">
+                    <div class="card-image-box">
+                        <img src="" alt="Fatty's Special">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-info">
+                            <h3 class="dish-title">Fatty's Special</h3>
+                            <span class="dish-price">₱ 000.00</span>
+                            <p class="dish-desc">Placeholder description for Fatty's Special.</p>
+                        </div>
+                        <button type="button" class="btn-add-cart" aria-label="Add Fatty's Special to cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="menu-item-card" data-category="burger">
+                    <div class="card-image-box">
+                        <span class="item-badge new">NEW</span>
+                        <img src="" alt="XL Hot Honey Chicken Sandwich">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-info">
+                            <h3 class="dish-title">XL Hot Honey Chicken Sandwich</h3>
+                            <span class="dish-price">₱ 000.00</span>
+                            <p class="dish-desc">Placeholder description for XL Hot Honey Chicken Sandwich.</p>
+                        </div>
+                        <button type="button" class="btn-add-cart" aria-label="Add XL Hot Honey Chicken Sandwich to cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- ================= HOTDOGS ================= -->
+                <article class="menu-item-card" data-category="hotdog">
+                    <div class="card-image-box">
+                        <img src="" alt="Bacon Wrapped Hotdog">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-info">
+                            <h3 class="dish-title">Bacon Wrapped Hotdog</h3>
+                            <span class="dish-price">₱ 000.00</span>
+                            <p class="dish-desc">Placeholder description for Bacon Wrapped Hotdog.</p>
+                        </div>
+                        <button type="button" class="btn-add-cart" aria-label="Add Bacon Wrapped Hotdog to cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- ================= SIDES ================= -->
+                <article class="menu-item-card" data-category="sides">
+                    <div class="card-image-box">
+                        <img src="" alt="Fatty's Nacho Supreme">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-info">
+                            <h3 class="dish-title">Fatty's Nacho Supreme</h3>
+                            <span class="dish-price">₱ 000.00</span>
+                            <p class="dish-desc">Placeholder description for Fatty's Nacho Supreme.</p>
+                        </div>
+                        <button type="button" class="btn-add-cart" aria-label="Add Fatty's Nacho Supreme to cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="menu-item-card" data-category="sides">
+                    <div class="card-image-box">
+                        <img src="" alt="Fatty's Fries Supreme">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-info">
+                            <h3 class="dish-title">Fatty's Fries Supreme</h3>
+                            <span class="dish-price">₱ 000.00 <small>(Combo with Burger +₱30)</small></span>
+                            <p class="dish-desc">Placeholder description for Fatty's Fries Supreme.</p>
+                        </div>
+                        <button type="button" class="btn-add-cart" aria-label="Add Fatty's Fries Supreme to cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="menu-item-card" data-category="sides">
+                    <div class="card-image-box">
+                        <span class="item-badge new">NEW</span>
+                        <span class="item-badge best-seller">BEST SELLER</span>
+                        <img src="" alt="Cheesy Jalapeno">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-info">
+                            <h3 class="dish-title">Cheesy Jalapeno</h3>
+                            <span class="dish-price">₱ 000.00</span>
+                            <p class="dish-desc">Placeholder description for Cheesy Jalapeno.</p>
+                        </div>
+                        <button type="button" class="btn-add-cart" aria-label="Add Cheesy Jalapeno to cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="menu-item-card" data-category="sides">
+                    <div class="card-image-box">
+                        <span class="item-badge new">NEW</span>
+                        <span class="item-badge best-seller">BEST SELLER</span>
+                        <img src="" alt="Mozzarella Sticks">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-info">
+                            <h3 class="dish-title">Mozzarella Sticks</h3>
+                            <span class="dish-price">₱ 000.00</span>
+                            <p class="dish-desc">Placeholder description for Mozzarella Sticks.</p>
+                        </div>
+                        <button type="button" class="btn-add-cart" aria-label="Add Mozzarella Sticks to cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- ================= MILKSHAKES ================= -->
+                <article class="menu-item-card" data-category="milkshake">
+                    <div class="card-image-box">
+                        <img src="" alt="Vanilla Milkshake">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-info">
+                            <h3 class="dish-title">Vanilla Milkshake</h3>
+                            <span class="dish-price">₱ 000.00</span>
+                            <p class="dish-desc">Placeholder description for Vanilla Milkshake.</p>
+                        </div>
+                        <button type="button" class="btn-add-cart" aria-label="Add Vanilla Milkshake to cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="menu-item-card" data-category="milkshake">
+                    <div class="card-image-box">
+                        <img src="" alt="Chocolate Milkshake">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-info">
+                            <h3 class="dish-title">Chocolate Milkshake</h3>
+                            <span class="dish-price">₱ 000.00</span>
+                            <p class="dish-desc">Placeholder description for Chocolate Milkshake.</p>
+                        </div>
+                        <button type="button" class="btn-add-cart" aria-label="Add Chocolate Milkshake to cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="menu-item-card" data-category="milkshake">
+                    <div class="card-image-box">
+                        <img src="" alt="Strawberry Milkshake">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-info">
+                            <h3 class="dish-title">Strawberry Milkshake</h3>
+                            <span class="dish-price">₱ 000.00</span>
+                            <p class="dish-desc">Placeholder description for Strawberry Milkshake.</p>
+                        </div>
+                        <button type="button" class="btn-add-cart" aria-label="Add Strawberry Milkshake to cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <img src="" alt="Fatty's American Diner Logo">
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/fattysamericandiner" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@fattysamericandiner" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <h4>QUICK LINKS</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="ordernow.html">Order Now</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-links">
+            <h4>INFORMATION</h4>
+            <ul>
+                <li><a href="index.html#franchising">Franchising</a></li>
+                <li><a href="ordernow.html#locations">Locations & Hours</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p class="copyright">© 2026 Fatty's American Diner. All rights reserved.</p>
+        <a href="portal-login.html" class="portal-login-link" aria-label="Franchisee and Admin Portal Login" title="Franchisee / Admin Login">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </div>
+</footer>
 </body>
 </html>
