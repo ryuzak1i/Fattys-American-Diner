@@ -3,9 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fatty's American Diner</title>
 </head>
 <body>
-    
+<header>
+    <nav class="navbar">
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <ul class="navbar-tabs">
+            <!-- Center Group -->
+            <li class="nav-center">
+                <a id="brand-name" href="#home">
+                    <img id="brand-logo" src="" alt="Fatty's American Diner Logo">
+                </a>
+            </li>
+
+            <!-- Left Group -->
+            <li class="nav-left">
+                <a href="#">HOME</a>
+                <a href="menu.html">MENU</a>
+                <a href="about.html">ABOUT</a>
+            </li>
+
+            <!-- Right Group -->
+            <li class="nav-right">
+                <a href="ordernow.html">ORDER NOW</a>
+                <a href="#" class="cart-icon-link" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <!--Notif bubble-->
+                    <span class="cart-badge">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <!-- Layer 1: Background Yellow Cheese Splash Vector (Top Right) -->
+        <div class="hero-cheese-vector" aria-hidden="true">
+            <img src="" alt="">
+        </div>
+
+        <!-- Layer 2: Large Background "SAVORY" Text -->
+        <h1 class="hero-bg-text" aria-label="Savory">
+            <span class="text-gold">SAV</span><span class="text-cream">ORY</span>
+        </h1>
+
+        <!-- Layer 3: Center Hero Visuals (Transparent Cheese Behind + Transparent Smash Burger in Front) -->
+        <div class="hero-burger-wrapper">
+            <img class="hero-cheese-splash" src="" alt="" aria-hidden="true">
+            <img class="hero-burger-img" src="" alt="Fatty's Signature Smash Burger">
+        </div>
+
+        <!-- Layer 4: Circular Order Now CTA Button (Bottom Right) -->
+        <a href="ordernow.html" class="hero-circle-cta">
+            ORDER<br>NOW !
+        </a>
+
+        <!-- Checkered Diner Border -->
+        <div class="checkered-divider" aria-hidden="true"></div>
+    </section>
+
+    <!-- Featured Items Section -->
+    <section class="featured-section" id="featured-items">
+        <h2 class="featured-heading">
+            <i class="fa-solid fa-star"></i>
+            FEATURED ITEMS
+            <i class="fa-solid fa-star"></i>
+        </h2>
+
+        <div class="carousel-wrapper">
+            <button class="carousel-arrow" id="prev-btn" aria-label="Previous featured item">
+                <i class="fa-solid fa-caret-left"></i>
+            </button>
+
+            <div class="carousel-track">
+                <!-- Previous Card -->
+                <div class="carousel-card side prev">
+                    <img src="" alt="Crispy Mozzarella Sticks">
+                </div>
+
+                <!-- Active Center Card -->
+                <div class="carousel-card active">
+                    <img src="" alt="Hot Honey Crispy Chicken">
+                </div>
+
+                <!-- Next Card -->
+                <div class="carousel-card side next">
+                    <img src="" alt="Loaded Diner Fries">
+                </div>
+            </div>
+
+            <button class="carousel-arrow" id="next-btn" aria-label="Next featured item">
+                <i class="fa-solid fa-caret-right"></i>
+            </button>
+        </div>
+
+        <!-- Bottom Info Box -->
+        <div class="featured-info-box">
+            <h3 class="featured-item-title">Hot Honey Crispy Chicken</h3>
+            <p class="featured-item-desc">
+                Crunchy buttermilk-fried chicken fillet glazed in our signature sweet-heat hot honey sauce, topped with tangy dill pickles on a toasted brioche bun.
+            </p>
+        </div>
+    </section>
+
+    <section class="franchise-section" id="franchising">
+        <div class="franchise-container">
+            <div class="franchise-media">
+                <img src="" alt="Fatty's American Diner Food Truck">
+            </div>
+
+            <div class="franchise-content">
+                <h2 class="franchise-title">PARTNER WITH US</h2>
+                <a href="franchise-inquiry.html" class="btn-inquire">INQUIRE NOW</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <img src="" alt="Fatty's American Diner Logo">
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/fattysamericandiner" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@fattysamericandiner" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <h4>QUICK LINKS</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="ordernow.html">Order Now</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-links">
+            <h4>INFORMATION</h4>
+            <ul>
+                <li><a href="#franchising">Franchising</a></li>
+                <li><a href="ordernow.html#locations">Locations & Hours</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p class="copyright">© 2026 Fatty's American Diner. All rights reserved.</p>
+        
+        <a href="portal-login.html" class="portal-login-link" aria-label="Franchisee and Admin Portal Login" title="Franchisee / Admin Login">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </div>
+</footer>
 </body>
 </html>
