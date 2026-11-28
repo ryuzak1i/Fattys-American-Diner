@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal | Fatty's American Diner</title>
+</head>
+<body class="portal-body">
+<div class="portal-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="portal-sidebar" aria-label="Admin Portal Navigation">
+        <div class="sidebar-brand">
+            <a href="index.html">
+                <img src="" alt="Fatty's American Diner Logo">
+            </a>
+            <span class="sidebar-subtitle">Fatty's Admin</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="#tab-admin-dashboard" class="portal-nav-link active" data-tab="dashboard">
+                        <i class="fa-solid fa-house" aria-hidden="true"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#tab-supply-orders" class="portal-nav-link" data-tab="supply-orders">
+                        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        <span>Supply Orders</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#tab-customer-orders" class="portal-nav-link" data-tab="customer-orders">
+                        <i class="fa-solid fa-truck" aria-hidden="true"></i>
+                        <span>Customer Orders</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#tab-commissary-menu" class="portal-nav-link" data-tab="commissary-menu">
+                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                        <span>Commissary &amp; Menu</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#tab-franchisees-inquiries" class="portal-nav-link" data-tab="franchisees-inquiries">
+                        <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
+                        <span>Franchisees &amp; Inquiries</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="portal-login.html" class="logout-link">
+                <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
+                <span>Log out</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <div class="portal-main-wrapper">
+        <header class="portal-topbar">
+            <div class="topbar-greeting">
+                <h1>Welcome, Juan</h1>
+                <p class="portal-role">ADMIN</p>
+            </div>
+
+            <div class="topbar-actions">
+                <button type="button" class="icon-btn" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="icon-btn" aria-label="Notifications">
+                    <i class="fa-regular fa-bell" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="icon-btn" aria-label="Account Profile">
+                    <i class="fa-regular fa-circle-user" aria-hidden="true"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="portal-content">
+            <!-- ================= TAB 1: DASHBOARD ================= -->
+            <section id="tab-admin-dashboard" class="portal-tab-panel active" aria-labelledby="admin-dashboard-heading">
+                <h2 id="admin-dashboard-heading" class="sr-only">Admin Operational Dashboard</h2>
+
+                <!-- 4 Operational KPI Cards -->
+                <div class="kpi-cards-grid four-cols">
+                    <article class="kpi-card">
+                        <span class="kpi-label">Pending Supply Orders</span>
+                        <strong class="kpi-value">0</strong>
+                    </article>
+
+                    <article class="kpi-card">
+                        <span class="kpi-label">Deliveries Due Today</span>
+                        <strong class="kpi-value">0</strong>
+                    </article>
+
+                    <article class="kpi-card">
+                        <span class="kpi-label">Pending Customer Orders</span>
+                        <strong class="kpi-value">0</strong>
+                    </article>
+
+                    <article class="kpi-card">
+                        <span class="kpi-label">New Franchise Inquiries</span>
+                        <strong class="kpi-value">0</strong>
+                    </article>
+                </div>
+
+                <!-- 2-Column Operational Split -->
+                <div class="dashboard-split-grid">
+                    <!-- Left: Incoming Supply Orders Queue -->
+                    <section class="panel-card incoming-queue-panel">
+                        <h3 class="panel-title">Incoming Supply Orders Queue</h3>
+                        <table class="portal-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Branch</th>
+                                    <th>Delivery Date</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#SO-0001</td>
+                                    <td>Taguig City</td>
+                                    <td>[MMM DD, YYYY]</td>
+                                    <td>₱ 000.00</td>
+                                    <td><span class="status-badge pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#SO-0003</td>
+                                    <td>General Trias, Cavite</td>
+                                    <td>[MMM DD, YYYY]</td>
+                                    <td>₱ 000.00</td>
+                                    <td><span class="status-badge approved">Approved</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Right: Aggregated Today's Commissary Prep Summary -->
+                    <section class="panel-card prep-summary-panel">
+                        <h3 class="panel-title">Today's Commissary Prep Summary</h3>
+                        <ul class="prep-summary-list">
+                            <li>
+                                <span>Classic Smash Beef Patties</span>
+                                <strong>0 Packs</strong>
+                            </li>
+                            <li>
+                                <span>Brioche Burger Buns</span>
+                                <strong>0 Packs</strong>
+                            </li>
+                            <li>
+                                <span>Shoestring French Fries</span>
+                                <strong>0 Bags</strong>
+                            </li>
+                            <li>
+                                <span>Fatty's Signature Burger Sauce</span>
+                                <strong>0 Gallons</strong>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+
+            <!-- ================= TAB 2: SUPPLY ORDERS ================= -->
+            <section id="tab-supply-orders" class="portal-tab-panel" aria-labelledby="supply-orders-heading">
+                <h2 id="supply-orders-heading" class="sr-only">Manage Franchisee Supply Orders</h2>
+
+                <div class="filter-toolbar space-between">
+                    <div class="status-filter-tabs" role="tablist" aria-label="Filter supply orders by status">
+                        <button type="button" class="status-tab active" data-status="all" role="tab" aria-selected="true">All</button>
+                        <button type="button" class="status-tab" data-status="pending" role="tab" aria-selected="false">Pending</button>
+                        <button type="button" class="status-tab" data-status="approved" role="tab" aria-selected="false">Approved</button>
+                        <button type="button" class="status-tab" data-status="dispatched" role="tab" aria-selected="false">Dispatched</button>
+                        <button type="button" class="status-tab" data-status="delivered" role="tab" aria-selected="false">Delivered</button>
+                    </div>
+
+                    <div class="date-filter-wrap">
+                        <label for="supply-date-filter" class="sr-only">Filter by Delivery Date</label>
+                        <input type="date" id="supply-date-filter" aria-label="Filter supply orders by delivery date">
+                    </div>
+                </div>
+
+                <div class="panel-card">
+                    <table class="portal-table expandable-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Branch</th>
+                                <th>Delivery Date</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Packing Slip</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="order-row" data-status="pending">
+                                <td>#SO-0001</td>
+                                <td>Taguig City</td>
+                                <td>[MMM DD, YYYY]</td>
+                                <td>₱ 000.00</td>
+                                <td>
+                                    <select aria-label="Update status for #SO-0001">
+                                        <option value="pending" selected>Pending</option>
+                                        <option value="approved">Approved</option>
+                                        <option value="dispatched">Dispatched</option>
+                                        <option value="delivered">Delivered</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-expand-packing-slip" aria-expanded="false" aria-label="Toggle packing slip for #SO-0001">
+                                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="packing-slip-row">
+                                <td colspan="6">
+                                    <div class="packing-slip-box">
+                                        <h4>Itemized Packing Slip — #SO-0001 (Taguig City)</h4>
+                                        <ul>
+                                            <li>Classic Smash Beef Patties × 5 Packs</li>
+                                            <li>Brioche Burger Buns × 5 Packs</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ================= TAB 3: CUSTOMER ORDERS ================= -->
+            <section id="tab-customer-orders" class="portal-tab-panel" aria-labelledby="customer-orders-heading">
+                <h2 id="customer-orders-heading" class="sr-only">Live Guest Customer Orders</h2>
+
+                <div class="filter-toolbar space-between">
+                    <div class="status-filter-tabs" role="tablist" aria-label="Filter customer orders by fulfillment">
+                        <button type="button" class="status-tab active" data-fulfillment="all" role="tab" aria-selected="true">All</button>
+                        <button type="button" class="status-tab" data-fulfillment="pickup" role="tab" aria-selected="false">Pickup</button>
+                        <button type="button" class="status-tab" data-fulfillment="delivery" role="tab" aria-selected="false">Delivery</button>
+                    </div>
+
+                    <div class="toolbar-right-filters">
+                        <select id="customer-status-filter" aria-label="Filter customer orders by status">
+                            <option value="all">All Statuses</option>
+                            <option value="pending">Pending</option>
+                            <option value="preparing">Preparing</option>
+                            <option value="ready">Ready / Out for Delivery</option>
+                            <option value="completed">Completed</option>
+                        </select>
+
+                        <input type="date" id="customer-date-filter" aria-label="Filter customer orders by date">
+                    </div>
+                </div>
+
+                <div class="panel-card">
+                    <table class="portal-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Branch</th>
+                                <th>Fulfillment</th>
+                                <th>Payment Method</th>
+                                <th>Proof of Payment</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#CO-1001</td>
+                                <td>Maria Santos</td>
+                                <td>Taguig City</td>
+                                <td>Delivery</td>
+                                <td>GCash</td>
+                                <td><a href="#" class="proof-link">View Proof</a></td>
+                                <td>₱ 000.00</td>
+                                <td>
+                                    <select aria-label="Update status for #CO-1001">
+                                        <option value="pending" selected>Pending</option>
+                                        <option value="preparing">Preparing</option>
+                                        <option value="ready">Out for Delivery</option>
+                                        <option value="completed">Completed</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#CO-1002</td>
+                                <td>Carlos Reyes</td>
+                                <td>General Trias, Cavite</td>
+                                <td>Pickup</td>
+                                <td>QRPh</td>
+                                <td><a href="#" class="proof-link">View Proof</a></td>
+                                <td>₱ 000.00</td>
+                                <td>
+                                    <select aria-label="Update status for #CO-1002">
+                                        <option value="pending">Pending</option>
+                                        <option value="preparing" selected>Preparing</option>
+                                        <option value="ready">Ready for Pickup</option>
+                                        <option value="completed">Completed</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#CO-1003</td>
+                                <td>Ana Mendoza</td>
+                                <td>Taguig City</td>
+                                <td>Delivery</td>
+                                <td>Card</td>
+                                <td><span class="proof-verified">Verified</span></td>
+                                <td>₱ 000.00</td>
+                                <td>
+                                    <select aria-label="Update status for #CO-1003">
+                                        <option value="pending">Pending</option>
+                                        <option value="preparing">Preparing</option>
+                                        <option value="ready">Out for Delivery</option>
+                                        <option value="completed" selected>Completed</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ================= TAB 4: COMMISSARY & MENU ================= -->
+            <section id="tab-commissary-menu" class="portal-tab-panel" aria-labelledby="commissary-menu-heading">
+                <h2 id="commissary-menu-heading" class="sr-only">Commissary Catalog and Public Menu Management</h2>
+
+                <div class="subtab-bar" role="tablist" aria-label="Catalog Management Sub-tabs">
+                    <button type="button" class="subtab-btn active" data-subtab="commissary-catalog" role="tab" aria-selected="true">Commissary Supply Catalog</button>
+                    <button type="button" class="subtab-btn" data-subtab="public-menu" role="tab" aria-selected="false">Public Customer Menu</button>
+                </div>
+
+                <!-- Sub-tab 1: Commissary Supply Catalog -->
+                <div id="subtab-commissary-catalog" class="subtab-panel active">
+                    <div class="subtab-actions">
+                        <button type="button" class="btn-add-item">+ Add Supply Item</button>
+                    </div>
+
+                    <div class="panel-card">
+                        <table class="portal-table">
+                            <thead>
+                                <tr>
+                                    <th>Item Name</th>
+                                    <th>Category</th>
+                                    <th>Unit</th>
+                                    <th>Unit Price (₱)</th>
+                                    <th>In Stock</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Classic Smash Beef Patties</td>
+                                    <td>Meats &amp; Patties</td>
+                                    <td>Pack of 20</td>
+                                    <td><input type="number" value="000" min="0" aria-label="Unit price for Classic Smash Beef Patties"></td>
+                                    <td><input type="checkbox" checked aria-label="Stock availability for Classic Smash Beef Patties"></td>
+                                    <td><button type="button" class="btn-save-row">Save</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Brioche Burger Buns</td>
+                                    <td>Buns &amp; Bread</td>
+                                    <td>Pack of 12</td>
+                                    <td><input type="number" value="000" min="0" aria-label="Unit price for Brioche Burger Buns"></td>
+                                    <td><input type="checkbox" checked aria-label="Stock availability for Brioche Burger Buns"></td>
+                                    <td><button type="button" class="btn-save-row">Save</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Sub-tab 2: Public Customer Menu -->
+                <div id="subtab-public-menu" class="subtab-panel">
+                    <div class="subtab-actions">
+                        <button type="button" class="btn-add-item">+ Add Menu Dish</button>
+                    </div>
+
+                    <div class="panel-card">
+                        <table class="portal-table">
+                            <thead>
+                                <tr>
+                                    <th>Dish Name</th>
+                                    <th>Category</th>
+                                    <th>Price (₱)</th>
+                                    <th>Available</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Fatty's Original</td>
+                                    <td>Burger</td>
+                                    <td><input type="number" value="000" min="0" aria-label="Price for Fatty's Original"></td>
+                                    <td><input type="checkbox" checked aria-label="Availability for Fatty's Original"></td>
+                                    <td><button type="button" class="btn-save-row">Save</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Fatty's Bacon Original</td>
+                                    <td>Burger</td>
+                                    <td><input type="number" value="000" min="0" aria-label="Price for Fatty's Bacon Original"></td>
+                                    <td><input type="checkbox" checked aria-label="Availability for Fatty's Bacon Original"></td>
+                                    <td><button type="button" class="btn-save-row">Save</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= TAB 5: FRANCHISEES & INQUIRIES ================= -->
+            <section id="tab-franchisees-inquiries" class="portal-tab-panel" aria-labelledby="franchisees-inquiries-heading">
+                <h2 id="franchisees-inquiries-heading" class="sr-only">Franchisees and Franchise Inquiries</h2>
+
+                <div class="subtab-bar" role="tablist" aria-label="Franchisees and Inquiries Sub-tabs">
+                    <button type="button" class="subtab-btn active" data-subtab="active-franchisees" role="tab" aria-selected="true">Active Franchisees</button>
+                    <button type="button" class="subtab-btn" data-subtab="franchise-inquiries" role="tab" aria-selected="false">Franchise Inquiries</button>
+                </div>
+
+                <!-- Sub-tab 1: Active Franchisees -->
+                <div id="subtab-active-franchisees" class="subtab-panel active">
+                    <div class="subtab-actions">
+                        <button type="button" class="btn-add-item">+ Create Franchisee Account</button>
+                    </div>
+
+                    <div class="panel-card">
+                        <table class="portal-table">
+                            <thead>
+                                <tr>
+                                    <th>Branch Name</th>
+                                    <th>Franchisee Name</th>
+                                    <th>Login Email</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Taguig City Branch</td>
+                                    <td>Juan Dela Cruz</td>
+                                    <td>taguig@fattysdiner.ph</td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td><button type="button" class="btn-manage-account">Manage</button></td>
+                                </tr>
+                                <tr>
+                                    <td>General Trias, Cavite Branch</td>
+                                    <td>[Franchisee Name]</td>
+                                    <td>gentri@fattysdiner.ph</td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td><button type="button" class="btn-manage-account">Manage</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Sub-tab 2: Franchise Inquiries -->
+                <div id="subtab-franchise-inquiries" class="subtab-panel">
+                    <div class="panel-card">
+                        <table class="portal-table">
+                            <thead>
+                                <tr>
+                                    <th>Inquiry ID</th>
+                                    <th>Applicant Name</th>
+                                    <th>Email &amp; Phone</th>
+                                    <th>Preferred Location</th>
+                                    <th>Submitted Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#INQ-001</td>
+                                    <td>[Applicant Name]</td>
+                                    <td>applicant@example.com · 09XX XXX XXXX</td>
+                                    <td>Makati City</td>
+                                    <td>[MMM DD, YYYY]</td>
+                                    <td>
+                                        <select aria-label="Update status for #INQ-001">
+                                            <option value="new" selected>New</option>
+                                            <option value="contacted">Contacted</option>
+                                            <option value="reviewing">Under Review</option>
+                                            <option value="approved">Approved</option>
+                                            <option value="declined">Declined</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchisee Portal | Fatty's American Diner</title>
+</head>
+<body class="portal-body">
+<div class="portal-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="portal-sidebar" aria-label="Franchisee Portal Navigation">
+        <div class="sidebar-brand">
+            <a href="index.html">
+                <img src="" alt="Fatty's American Diner Logo">
+            </a>
+            <span class="sidebar-subtitle">Fatty's Portal</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="#tab-dashboard" class="portal-nav-link active" data-tab="dashboard">
+                        <i class="fa-solid fa-house" aria-hidden="true"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#tab-order-supplies" class="portal-nav-link" data-tab="order-supplies">
+                        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        <span>Order Supplies</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#tab-order-history" class="portal-nav-link" data-tab="order-history">
+                        <i class="fa-solid fa-truck" aria-hidden="true"></i>
+                        <span>Order History</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="portal-login.html" class="logout-link">
+                <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
+                <span>Log out</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <div class="portal-main-wrapper">
+        <header class="portal-topbar">
+            <div class="topbar-greeting">
+                <h1>Welcome, Juan</h1>
+                <p class="portal-role">FRANCHISEE, TAGUIG BRANCH</p>
+            </div>
+
+            <div class="topbar-actions">
+                <button type="button" class="icon-btn" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="icon-btn" aria-label="Notifications">
+                    <i class="fa-regular fa-bell" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="icon-btn" aria-label="Account Profile">
+                    <i class="fa-regular fa-circle-user" aria-hidden="true"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="portal-content">
+            <!-- ================= TAB 1: DASHBOARD ================= -->
+            <section id="tab-dashboard" class="portal-tab-panel active" aria-labelledby="dashboard-heading">
+                <h2 id="dashboard-heading" class="sr-only">Franchisee Dashboard</h2>
+
+                <!-- 4 Top Summary Cards (3 KPIs + Place New Supply Order CTA) -->
+                <div class="kpi-cards-grid">
+                    <article class="kpi-card">
+                        <span class="kpi-label">Active Orders</span>
+                        <strong class="kpi-value">0</strong>
+                    </article>
+
+                    <article class="kpi-card">
+                        <span class="kpi-label">Next Delivery Date</span>
+                        <strong class="kpi-value">[MMM DD, YYYY]</strong>
+                    </article>
+
+                    <article class="kpi-card">
+                        <span class="kpi-label">Monthly Spend</span>
+                        <strong class="kpi-value">₱ 000.00</strong>
+                    </article>
+
+                    <article class="kpi-card kpi-cta-card">
+                        <a href="#tab-order-supplies" class="btn-place-supply-order">
+                            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                            Place New Supply Order
+                        </a>
+                    </article>
+                </div>
+
+                <!-- Dashboard Split: Recent Supply Orders (Left) + Quick Reorder Staples (Right) -->
+                <div class="dashboard-split-grid">
+                    <section class="panel-card recent-orders-panel">
+                        <h3 class="panel-title">Recent Supply Orders</h3>
+                        <table class="portal-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#SO-0001</td>
+                                    <td>[MMM DD, YYYY]</td>
+                                    <td>Classic Smash Patties, Brioche Buns (+3)</td>
+                                    <td>₱ 000.00</td>
+                                    <td><span class="status-badge pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#SO-0002</td>
+                                    <td>[MMM DD, YYYY]</td>
+                                    <td>Shoestring Fries, Cheddar Cheese (+2)</td>
+                                    <td>₱ 000.00</td>
+                                    <td><span class="status-badge delivered">Delivered</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section class="panel-card quick-reorder-panel">
+                        <h3 class="panel-title">Quick Reorder Staples</h3>
+                        <ul class="staples-list">
+                            <li class="staple-item">
+                                <div class="staple-info">
+                                    <span class="staple-name">Classic Smash Beef Patties</span>
+                                    <span class="staple-meta">Pack of 20 · ₱ 000.00</span>
+                                </div>
+                                <button type="button" class="btn-quick-reorder">+ Reorder</button>
+                            </li>
+                            <li class="staple-item">
+                                <div class="staple-info">
+                                    <span class="staple-name">Brioche Burger Buns</span>
+                                    <span class="staple-meta">Pack of 12 · ₱ 000.00</span>
+                                </div>
+                                <button type="button" class="btn-quick-reorder">+ Reorder</button>
+                            </li>
+                            <li class="staple-item">
+                                <div class="staple-info">
+                                    <span class="staple-name">Shoestring Fries</span>
+                                    <span class="staple-meta">2kg Bag · ₱ 000.00</span>
+                                </div>
+                                <button type="button" class="btn-quick-reorder">+ Reorder</button>
+                            </li>
+                            <li class="staple-item">
+                                <div class="staple-info">
+                                    <span class="staple-name">Fatty's Signature Burger Sauce</span>
+                                    <span class="staple-meta">1 Gallon · ₱ 000.00</span>
+                                </div>
+                                <button type="button" class="btn-quick-reorder">+ Reorder</button>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+
+            <!-- ================= TAB 2: ORDER SUPPLIES ================= -->
+            <section id="tab-order-supplies" class="portal-tab-panel" aria-labelledby="order-supplies-heading">
+                <h2 id="order-supplies-heading" class="sr-only">Order Commissary Supplies</h2>
+
+                <!-- Top Search & Category Filter Bar -->
+                <div class="filter-toolbar">
+                    <div class="search-input-wrap">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <input type="search" id="supply-search" placeholder="Search supplies..." aria-label="Search commissary supplies">
+                    </div>
+
+                    <select id="supply-category-filter" aria-label="Filter supplies by category">
+                        <option value="all">All Categories</option>
+                        <option value="meats">Meats &amp; Patties</option>
+                        <option value="bakery">Buns &amp; Bread</option>
+                        <option value="dairy-sauces">Dairy &amp; Sauces</option>
+                        <option value="sides">Sides &amp; Appetizers</option>
+                        <option value="beverages">Beverages</option>
+                        <option value="packaging">Packaging &amp; Supplies</option>
+                    </select>
+                </div>
+
+                <!-- 70/30 Split View -->
+                <div class="supply-order-split">
+                    <!-- Left (70%): 20-Item Commissary Catalog -->
+                    <div class="commissary-catalog-panel">
+                        <div class="commissary-grid" id="commissary-catalog">
+                            <article class="supply-item-card" data-category="meats">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">1. Classic Smash Beef Patties</h3>
+                                    <span class="supply-item-unit">Pack of 20 (100g each)</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Classic Smash Beef Patties">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Classic Smash Beef Patties">
+                                    <button type="button" class="qty-plus" aria-label="Increase Classic Smash Beef Patties">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="meats">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">2. Crispy Buttermilk Chicken Fillets</h3>
+                                    <span class="supply-item-unit">Pack of 15</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Crispy Buttermilk Chicken Fillets">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Crispy Buttermilk Chicken Fillets">
+                                    <button type="button" class="qty-plus" aria-label="Increase Crispy Buttermilk Chicken Fillets">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="meats">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">3. All-Beef Hotdog Franks</h3>
+                                    <span class="supply-item-unit">Pack of 20</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease All-Beef Hotdog Franks">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for All-Beef Hotdog Franks">
+                                    <button type="button" class="qty-plus" aria-label="Increase All-Beef Hotdog Franks">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="meats">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">4. Smoked Bacon Strips</h3>
+                                    <span class="supply-item-unit">1kg Pack</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Smoked Bacon Strips">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Smoked Bacon Strips">
+                                    <button type="button" class="qty-plus" aria-label="Increase Smoked Bacon Strips">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="bakery">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">5. Brioche Burger Buns</h3>
+                                    <span class="supply-item-unit">Pack of 12</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Brioche Burger Buns">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Brioche Burger Buns">
+                                    <button type="button" class="qty-plus" aria-label="Increase Brioche Burger Buns">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="bakery">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">6. Split-Top Hotdog Buns</h3>
+                                    <span class="supply-item-unit">Pack of 12</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Split-Top Hotdog Buns">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Split-Top Hotdog Buns">
+                                    <button type="button" class="qty-plus" aria-label="Increase Split-Top Hotdog Buns">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="dairy-sauces">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">7. Sliced American Cheddar</h3>
+                                    <span class="supply-item-unit">Pack of 48 Slices</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Sliced American Cheddar">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Sliced American Cheddar">
+                                    <button type="button" class="qty-plus" aria-label="Increase Sliced American Cheddar">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="dairy-sauces">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">8. Liquid Nacho Cheese Sauce</h3>
+                                    <span class="supply-item-unit">2L Pouch</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Liquid Nacho Cheese Sauce">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Liquid Nacho Cheese Sauce">
+                                    <button type="button" class="qty-plus" aria-label="Increase Liquid Nacho Cheese Sauce">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="dairy-sauces">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">9. Fatty's Signature Burger Sauce</h3>
+                                    <span class="supply-item-unit">1 Gallon Jug</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Fatty's Signature Burger Sauce">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Fatty's Signature Burger Sauce">
+                                    <button type="button" class="qty-plus" aria-label="Increase Fatty's Signature Burger Sauce">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="dairy-sauces">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">10. Sweet-Heat Hot Honey Glaze</h3>
+                                    <span class="supply-item-unit">1L Bottle</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Sweet-Heat Hot Honey Glaze">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Sweet-Heat Hot Honey Glaze">
+                                    <button type="button" class="qty-plus" aria-label="Increase Sweet-Heat Hot Honey Glaze">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="dairy-sauces">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">11. Crinkle-Cut Dill Pickles</h3>
+                                    <span class="supply-item-unit">1 Gallon Jar</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Crinkle-Cut Dill Pickles">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Crinkle-Cut Dill Pickles">
+                                    <button type="button" class="qty-plus" aria-label="Increase Crinkle-Cut Dill Pickles">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="sides">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">12. Shoestring French Fries</h3>
+                                    <span class="supply-item-unit">2kg Bag</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Shoestring French Fries">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Shoestring French Fries">
+                                    <button type="button" class="qty-plus" aria-label="Increase Shoestring French Fries">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="sides">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">13. Breaded Mozzarella Sticks</h3>
+                                    <span class="supply-item-unit">1kg Pack</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Breaded Mozzarella Sticks">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Breaded Mozzarella Sticks">
+                                    <button type="button" class="qty-plus" aria-label="Increase Breaded Mozzarella Sticks">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="sides">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">14. Crispy Corn Tortilla Chips</h3>
+                                    <span class="supply-item-unit">1kg Bag</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Crispy Corn Tortilla Chips">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Crispy Corn Tortilla Chips">
+                                    <button type="button" class="qty-plus" aria-label="Increase Crispy Corn Tortilla Chips">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="beverages">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">15. Vanilla Milkshake Soft-Serve Mix</h3>
+                                    <span class="supply-item-unit">2L Carton</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Vanilla Milkshake Soft-Serve Mix">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Vanilla Milkshake Soft-Serve Mix">
+                                    <button type="button" class="qty-plus" aria-label="Increase Vanilla Milkshake Soft-Serve Mix">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="beverages">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">16. Diner Chocolate &amp; Strawberry Syrup</h3>
+                                    <span class="supply-item-unit">1L Bottle</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Diner Chocolate and Strawberry Syrup">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Diner Chocolate and Strawberry Syrup">
+                                    <button type="button" class="qty-plus" aria-label="Increase Diner Chocolate and Strawberry Syrup">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="packaging">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">17. Checkered Burger Wax Wrappers</h3>
+                                    <span class="supply-item-unit">Pack of 250 Sheets</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Checkered Burger Wax Wrappers">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Checkered Burger Wax Wrappers">
+                                    <button type="button" class="qty-plus" aria-label="Increase Checkered Burger Wax Wrappers">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="packaging">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">18. Clamshell Takeout Boxes</h3>
+                                    <span class="supply-item-unit">Pack of 100</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Clamshell Takeout Boxes">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Clamshell Takeout Boxes">
+                                    <button type="button" class="qty-plus" aria-label="Increase Clamshell Takeout Boxes">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="packaging">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">19. 16oz Milkshake Cups &amp; Dome Lids</h3>
+                                    <span class="supply-item-unit">Pack of 100 Sets</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease 16oz Milkshake Cups and Dome Lids">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for 16oz Milkshake Cups and Dome Lids">
+                                    <button type="button" class="qty-plus" aria-label="Increase 16oz Milkshake Cups and Dome Lids">+</button>
+                                </div>
+                            </article>
+
+                            <article class="supply-item-card" data-category="packaging">
+                                <div class="supply-item-info">
+                                    <h3 class="supply-item-name">20. Kraft Takeout Bags &amp; Napkins</h3>
+                                    <span class="supply-item-unit">Bundle of 100</span>
+                                    <span class="supply-item-price">₱ 000.00</span>
+                                </div>
+                                <div class="qty-stepper">
+                                    <button type="button" class="qty-minus" aria-label="Decrease Kraft Takeout Bags and Napkins">-</button>
+                                    <input type="number" value="0" min="0" aria-label="Quantity for Kraft Takeout Bags and Napkins">
+                                    <button type="button" class="qty-plus" aria-label="Increase Kraft Takeout Bags and Napkins">+</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Right (30%): Sticky Order Summary Panel -->
+                    <aside class="order-summary-panel" aria-label="Supply Order Summary">
+                        <h3 class="panel-title">Order Summary</h3>
+
+                        <form id="supply-order-form">
+                            <div class="summary-branch">
+                                <span class="summary-label">Branch</span>
+                                <strong id="summary-branch-name">Taguig City Branch</strong>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferred-delivery-date">Preferred Delivery Date</label>
+                                <input type="date" id="preferred-delivery-date" name="deliveryDate" required>
+                            </div>
+
+                            <div class="summary-items-list" id="supply-summary-items">
+                                <p class="empty-summary-msg">No supplies selected yet.</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="supply-order-notes">Notes</label>
+                                <textarea id="supply-order-notes" name="notes" rows="3" placeholder="Delivery instructions or special requests..."></textarea>
+                            </div>
+
+                            <div class="summary-total-row">
+                                <span>Total</span>
+                                <strong id="supply-order-total">₱ 000.00</strong>
+                            </div>
+
+                            <button type="submit" class="btn-submit-supply">Submit Supply Order</button>
+                        </form>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- ================= TAB 3: ORDER HISTORY ================= -->
+            <section id="tab-order-history" class="portal-tab-panel" aria-labelledby="order-history-heading">
+                <h2 id="order-history-heading" class="sr-only">Supply Order History</h2>
+
+                <!-- Top Status Filter Tabs -->
+                <div class="status-filter-tabs" role="tablist" aria-label="Filter order history by status">
+                    <button type="button" class="status-tab active" data-status="all" role="tab" aria-selected="true">All</button>
+                    <button type="button" class="status-tab" data-status="pending" role="tab" aria-selected="false">Pending</button>
+                    <button type="button" class="status-tab" data-status="approved" role="tab" aria-selected="false">Approved</button>
+                    <button type="button" class="status-tab" data-status="dispatched" role="tab" aria-selected="false">Dispatched</button>
+                    <button type="button" class="status-tab" data-status="delivered" role="tab" aria-selected="false">Delivered</button>
+                </div>
+
+                <!-- Full-Width Table with Expandable Itemized Receipts -->
+                <div class="panel-card">
+                    <table class="portal-table expandable-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Order Date</th>
+                                <th>Delivery Date</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Receipt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="order-row" data-status="pending">
+                                <td>#SO-0001</td>
+                                <td>[MMM DD, YYYY]</td>
+                                <td>[MMM DD, YYYY]</td>
+                                <td>₱ 000.00</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>
+                                    <button type="button" class="btn-expand-receipt" aria-expanded="false" aria-label="Toggle itemized receipt for #SO-0001">
+                                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="receipt-detail-row">
+                                <td colspan="6">
+                                    <div class="receipt-box">
+                                        <h4>Itemized Receipt — #SO-0001</h4>
+                                        <ul>
+                                            <li>Classic Smash Beef Patties × 5 — ₱ 000.00</li>
+                                            <li>Brioche Burger Buns × 5 — ₱ 000.00</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="order-row" data-status="delivered">
+                                <td>#SO-0002</td>
+                                <td>[MMM DD, YYYY]</td>
+                                <td>[MMM DD, YYYY]</td>
+                                <td>₱ 000.00</td>
+                                <td><span class="status-badge delivered">Delivered</span></td>
+                                <td>
+                                    <button type="button" class="btn-expand-receipt" aria-expanded="false" aria-label="Toggle itemized receipt for #SO-0002">
+                                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="receipt-detail-row">
+                                <td colspan="6">
+                                    <div class="receipt-box">
+                                        <h4>Itemized Receipt — #SO-0002</h4>
+                                        <ul>
+                                            <li>Shoestring French Fries × 4 — ₱ 000.00</li>
+                                            <li>Sliced American Cheddar × 2 — ₱ 000.00</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+</body>
+</html>

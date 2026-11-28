@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Login | Fatty's American Diner</title>
+</head>
+<body>
+<header class="portal-login-header">
+    <nav class="navbar">
+        <a id="brand-name" href="index.html">
+            <img id="brand-logo" src="" alt="Fatty's American Diner Logo">
+        </a>
+
+        <ul class="navbar-tabs">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="ordernow.html">Order Now</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="portal-login-page">
+    <div class="login-split-container">
+        <!-- Left: Visual / Brand Showcase -->
+        <section class="login-media-panel" aria-label="Fatty's American Diner Portal Visual">
+            <img src="" alt="Fatty's American Diner Food Truck">
+        </section>
+
+        <!-- Right: Login Card (redirects to franchisee-portal.html or admin-portal.html by role) -->
+        <section class="login-form-panel" aria-label="Portal Login Form">
+            <div class="login-card">
+                <h1 class="login-title">Log In</h1>
+
+                <form id="portal-login-form">
+                    <div class="form-group">
+                        <label for="login-email" class="sr-only">Email</label>
+                        <input type="email" id="login-email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password" class="sr-only">Password</label>
+                        <input type="password" id="login-password" name="password" placeholder="Password" required>
+                    </div>
+
+                    <button type="submit" class="btn-login">Log In</button>
+                </form>
+
+                <a href="#" class="forgot-password-link">Forgot Password?</a>
+            </div>
+        </section>
+    </div>
+</main>
+</body>
+</html>
