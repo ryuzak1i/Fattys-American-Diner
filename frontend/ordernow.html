@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Order Now | Fatty's American Diner</title>
 </head>
 <body>
 <header>
@@ -40,5 +40,184 @@
         </ul>
     </nav>
 </header>
+
+<main id="order-page">
+    <!-- Order Now Hero Banner -->
+    <section class="order-hero" id="order-now">
+        <h1 class="order-page-title">ORDER NOW</h1>
+    </section>
+
+    <!-- Branch Locator & Fulfillment Section -->
+    <section class="locations-section" id="locations">
+        <div class="order-locator-container">
+            <!-- Left: Map Panel -->
+            <div class="order-map-panel">
+                <div class="map-container" id="branch-map" aria-label="Map of Fatty's American Diner branches">
+                    <img src="" alt="Map showing Fatty's American Diner branches in General Trias, Cavite and Taguig City">
+                    <button type="button" class="map-pin active" data-branch="gentri" aria-label="General Trias, Cavite Branch Pin">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="map-pin" data-branch="taguig" aria-label="Taguig City Branch Pin">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Fulfillment Toggle, Search & Branch Cards -->
+            <div class="order-branch-panel">
+                <div class="fulfillment-toggle" role="tablist" aria-label="Order fulfillment method">
+                    <button type="button" class="toggle-btn active" data-mode="pickup" role="tab" aria-selected="true">PICK-UP</button>
+                    <button type="button" class="toggle-btn" data-mode="delivery" role="tab" aria-selected="false">DELIVERY</button>
+                </div>
+
+                <div class="branch-search-box">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input type="search" id="branch-search" placeholder="Find name or place..." aria-label="Find branch name or place">
+                </div>
+
+                <div class="branch-cards-list" id="branch-list">
+                    <article class="branch-card active" data-branch="gentri">
+                        <h2 class="branch-name">General Trias, Cavite</h2>
+                        <p class="branch-address">[General Trias, Cavite Address Placeholder]</p>
+                        <p class="branch-hours">00:00 AM - 00:00 PM</p>
+                        <button type="button" class="btn-select-branch">SELECT BRANCH</button>
+                    </article>
+
+                    <article class="branch-card" data-branch="taguig">
+                        <h2 class="branch-name">Taguig City</h2>
+                        <p class="branch-address">[Taguig City Address Placeholder]</p>
+                        <p class="branch-hours">00:00 AM - 00:00 PM</p>
+                        <button type="button" class="btn-select-branch">SELECT BRANCH</button>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkered-divider" aria-hidden="true"></div>
+    </section>
+
+    <!-- Cart Summary & Checkout Section -->
+    <section class="checkout-section" id="checkout">
+        <div class="checkout-container">
+            <!-- Cart Summary -->
+            <div class="cart-summary-card">
+                <h2 class="checkout-heading">YOUR ORDER</h2>
+
+                <div class="cart-items-list" id="cart-items">
+                    <p class="cart-empty-msg">Your bag is currently empty. <a href="menu.html">Browse the Menu</a> to add items.</p>
+                </div>
+
+                <div class="cart-totals">
+                    <div class="total-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">₱ 000.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Delivery Fee</span>
+                        <span id="cart-delivery-fee">₱ 000.00</span>
+                    </div>
+                    <div class="total-row grand-total">
+                        <span>Total</span>
+                        <span id="cart-total">₱ 000.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checkout Form -->
+            <div class="checkout-form-card">
+                <h2 class="checkout-heading">CHECKOUT DETAILS</h2>
+
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="customer-name">Full Name</label>
+                        <input type="text" id="customer-name" name="customerName" placeholder="Juan Dela Cruz" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-phone">Contact Number</label>
+                        <input type="tel" id="customer-phone" name="customerPhone" placeholder="09XX XXX XXXX" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-email">Email Address</label>
+                        <input type="email" id="customer-email" name="customerEmail" placeholder="you@example.com">
+                    </div>
+
+                    <div class="form-group" id="delivery-address-group">
+                        <label for="delivery-address">Delivery Address</label>
+                        <textarea id="delivery-address" name="deliveryAddress" rows="3" placeholder="House/Unit No., Street, Barangay, City"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="order-notes">Order Notes</label>
+                        <textarea id="order-notes" name="orderNotes" rows="2" placeholder="Special instructions, landmarks, etc."></textarea>
+                    </div>
+
+                    <fieldset class="form-group payment-methods">
+                        <legend>Payment Method</legend>
+
+                        <label class="payment-option">
+                            <input type="radio" name="paymentMethod" value="cod" checked>
+                            <span>Cash (on Pick-up)</span>
+                        </label>
+
+                        <label class="payment-option">
+                            <input type="radio" name="paymentMethod" value="ewallet">
+                            <span>GCash / Maya / QRPH</span>
+                        </label>
+
+                        <label class="payment-option">
+                            <input type="radio" name="paymentMethod" value="card">
+                            <span>Credit / Debit Card</span>
+                        </label>
+                    </fieldset>
+
+                    <button type="submit" class="btn-place-order">PLACE ORDER</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <img src="" alt="Fatty's American Diner Logo">
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/fattysamericandiner" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@fattysamericandiner" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <h4>QUICK LINKS</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="ordernow.html">Order Now</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-links">
+            <h4>INFORMATION</h4>
+            <ul>
+                <li><a href="index.html#franchising">Franchising</a></li>
+                <li><a href="ordernow.html#locations">Locations & Hours</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p class="copyright">© 2026 Fatty's American Diner. All rights reserved.</p>
+        
+        <a href="portal-login.html" class="portal-login-link" aria-label="Franchisee and Admin Portal Login" title="Franchisee / Admin Login">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </div>
+</footer>
 </body>
 </html>
